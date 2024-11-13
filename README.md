@@ -12,7 +12,7 @@ an OpenAI API KEY to get [here]( https://ctxt.io/2/AAB4mgk3Fw)
 
 General guideline
 
-This lab guide relies on the examples seen in the slides. 
+This lab guide relies on the examples seen in the [slides] (https://docs.google.com/presentation/d/1c7qB-nLaqTAZbm62Sd5AhUxfQfNpKlFsF-q-EKJJZHg/edit?usp=sharing). 
 In order to have all the information you need, you should have the lab instructions and the slides side by side, so you can refer to the examples seen in the slides at any time.
 
 
@@ -62,7 +62,7 @@ You do not need to setup the environment variable at this stage, as it will be l
       }
   }
   ```
-- As seen in the slides, update your test configuration so it properly sets the value for the environment variable OPENAI_API_KEY, you can get the key [here]( https://ctxt.io/2/AAB4mgk3Fw) (not required for online IDE)
+- As seen in the slides, update your JUnit test configuration so it properly sets the value for the environment variable OPENAI_API_KEY, you can get the key [here]( https://ctxt.io/2/AAB4mgk3Fw) (not required for online IDE)
 - Run your test to verify setup. 
 - (To run the test for the online IDE execute in the shell `mvn -Dtest=ApplicationTests test` )
 
@@ -71,17 +71,17 @@ You do not need to setup the environment variable at this stage, as it will be l
 #### 2.1 Using the ChatClient for book recommendations
 1. Update the class [BookRecommendationService](src/main/java/com/spring/book/BookRecommendationService.java)  in `com.spring.book`.
    
-   As its name says, it is a Spring service and should be annotated with the @Service stereotype annotation
+   As its name says, it is a Spring service and should be annotated with the `@Service` stereotype annotation
 
-2. Initialize the `chatClient chatClient` in the [BookRecommendationService](src/main/java/com/spring/book/BookRecommendationService.java) constructor 
+2. Initialize the `chatClient` in the [BookRecommendationService](src/main/java/com/spring/book/BookRecommendationService.java) constructor 
 
-3. Inside [BookRecommendationService](src/main/java/com/spring/book/BookRecommendationService.java), Complete the method `findMostPopularProgrammingBooks`. It should use a ChatClient instance in order to ask for the 5 best programming books in year 2023 and return the response in a String format.
+3. Inside [BookRecommendationService](src/main/java/com/spring/book/BookRecommendationService.java), Complete the method `findMostPopularProgrammingBooks`. It should use a `ChatClient` instance in order to ask for the 5 best programming books in year 2023 and return the response in a String format.
 
 4. Update a JUnit test [BookRecommendationServiceTest](src/test/java/com/spring/book/BookRecommendationServiceTest.java) complete the methode `shouldFindMostPopularProgrammingBooks`
 
-Before running BookRecommendationServiceTest, edit its run configuration and add an environment variable `OPENAI_API_KEY` for the OpenAI API [key]( https://ctxt.io/2/AAB4mgk3Fw) (not required for online IDE)
+Before running `BookRecommendationServiceTest`, edit its run configuration and add an environment variable `OPENAI_API_KEY` for the OpenAI API [key]( https://ctxt.io/2/AAB4mgk3Fw) (not required for online IDE)
 
-Run BookRecommendationServiceTest. If you are able to see the response in the logs, you have successfully used Spring AI with OpenAI, congratulations!
+Run `BookRecommendationServiceTest`. If you are able to see the response in the logs, you have successfully used Spring AI with OpenAI, congratulations!
 
 (For the online IDE execute in the shell `mvn -Dtest=BookRecommendationServiceTest#shouldFindMostPopularProgrammingBooks test` )
 ### 3. Logs, Entities, and Images
@@ -115,15 +115,15 @@ If you are able to see the response in the logs, you have successfully mapped yo
 If you did not complete the section 3.2, please checkout the branch : `To update`
 
 Inside the folder src/main/resources, you have a folder [weather](src/main/resources/weather), check the lab file [singapore-weather.png](src/main/resources/weather/singapore-weather.png).
-- Create a new java package com.spring.weather. Inside this package, create a class called WeatherService. As seen in the slides, it should load [singapore-weather.png](src/main/resources/weather/singapore-weather.png) as a Resource and use it to make a call to the LLM. The question should be "what will be the weather like on Tuesday"
-- When done, create a test class called com.spring.weather.WeatherServiceTest.
+- Create a new java package `com.spring.weather`. Inside this package, create a class called `WeatherService`. As seen in the slides, it should load [singapore-weather.png](src/main/resources/weather/singapore-weather.png) as a `org.springframework.core.io.Resource` and use it to make a call to the LLM. The question should be "what will be the weather like on Tuesday"
+- When done, create a test class called `com.spring.weather.WeatherServiceTest`.
   Before running `WeatherServiceTest`, edit its run configuration and add an environment variable `OPENAI_API_KEY` for the OpenAI API [key]( https://ctxt.io/2/AAB4mgk3Fw) (not required for online IDE)
   
  (For the online IDE execute in the shell `mvn -Dtest=WeatherServiceTest test` )
 
 
 
-If you are able to call WeatherService successfully and get the correct weather forecast, you have completed this lab, congratulations!
+If you are able to call `WeatherService` successfully and get the correct weather forecast, you have completed this lab, congratulations!
 
 ### 4. (BONUS) Retrieval Augmented Generation 
 
