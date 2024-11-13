@@ -32,13 +32,13 @@ Our first goal is to install the Spring AI dependencies and write a simple API c
 
 #### 1.1 Setting up your Spring AI project
 - Make sure you have Java version 21 installed.
-- Install the dependencies using `mvnw clean install -DskipTests`
+- Install the dependencies using `mvn clean install -DskipTests`
 
 If you don't have installed IntelliJ and Java 21 you can use this online environment for this HandsOn [OnlineIDE](https://replit.com/@puls972/SpringAiHandsOn)
 - Create a new account (Free)
 - Fork the project 
 - Access the shell 
-- Install the dependencies using `mvnw clean install -DskipTests`
+- Install the dependencies using `mvn clean install -DskipTests`
 
 #### 1.2 application.properties configuration
 -Specify `gpt-4o` as the OpenAI model to be used in the parameter `spring.ai.openai.chat.options.model`
