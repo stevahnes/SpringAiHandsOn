@@ -8,7 +8,7 @@ Java Development Kit (ideally version 21 or later)
 
 An IDE such as IntelliJ Community Edition or Ultimate Edition (ideally the latest version)
 
-an OpenAI API KEY to get [here]( https://ctxt.io/2/AAB4mgk3Fw)
+an OpenAI API KEY to get [here]( https://ctxt.io/2/AAB4vv0pEA)
 
 General guideline
 
@@ -62,7 +62,7 @@ You do not need to setup the environment variable at this stage, as it will be l
       }
   }
   ```
-- As seen in the slides, update your JUnit test configuration so it properly sets the value for the environment variable OPENAI_API_KEY, you can get the key [here]( https://ctxt.io/2/AAB4mgk3Fw) (not required for online IDE)
+- As seen in the slides, update your JUnit test configuration so it properly sets the value for the environment variable OPENAI_API_KEY, you can get the key [here]( https://ctxt.io/2/AAB4vv0pEA) (not required for online IDE)
 - Run your test to verify setup. 
 - (To run the test for the online IDE execute in the shell `mvn -Dtest=ApplicationTests test` )
 
@@ -79,7 +79,7 @@ You do not need to setup the environment variable at this stage, as it will be l
 
 4. Update a JUnit test [BookRecommendationServiceTest](src/test/java/com/spring/book/BookRecommendationServiceTest.java) complete the methode `shouldFindMostPopularProgrammingBooks`
 
-Before running `BookRecommendationServiceTest`, edit its run configuration and add an environment variable `OPENAI_API_KEY` for the OpenAI API [key]( https://ctxt.io/2/AAB4mgk3Fw) (not required for online IDE)
+Before running `BookRecommendationServiceTest`, edit its run configuration and add an environment variable `OPENAI_API_KEY` for the OpenAI API [key]( https://ctxt.io/2/AAB4vv0pEA) (not required for online IDE)
 
 Run `BookRecommendationServiceTest`. If you are able to see the response in the logs, you have successfully used Spring AI with OpenAI, congratulations!
 
@@ -117,7 +117,7 @@ If you did not complete the section 3.2, please checkout the branch : `solution_
 Inside the folder src/main/resources, you have a folder [weather](src/main/resources/weather), check the lab file [singapore-weather.png](src/main/resources/weather/singapore-weather.png).
 - Create a new java package `com.spring.weather`. Inside this package, create a class called `WeatherService`. As seen in the slides, it should load [singapore-weather.png](src/main/resources/weather/singapore-weather.png) as a `org.springframework.core.io.Resource` and use it to make a call to the LLM. The question should be "what will be the weather like on Tuesday"
 - When done, create a test class called `com.spring.weather.WeatherServiceTest`.
-  Before running `WeatherServiceTest`, edit its run configuration and add an environment variable `OPENAI_API_KEY` for the OpenAI API [key]( https://ctxt.io/2/AAB4mgk3Fw) (not required for online IDE)
+  Before running `WeatherServiceTest`, edit its run configuration and add an environment variable `OPENAI_API_KEY` for the OpenAI API [key]( https://ctxt.io/2/AAB4vv0pEA) (not required for online IDE)
   
  (For the online IDE execute in the shell `mvn -Dtest=WeatherServiceTest test` )
 
